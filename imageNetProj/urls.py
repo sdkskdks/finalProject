@@ -26,7 +26,7 @@ urlpatterns = [
     path('', views.index, name='homepage'),
     path('classifyImg', views.classifyImg, name='classifyImg'),
     path('history', views.showHistory, name='showHistory'),
-    path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
+    path(r'^images/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
     path(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
 ]
 

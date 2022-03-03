@@ -1,5 +1,4 @@
 {% extends 'plain.html' %}
-{% load static %}
 {% block content %}
     <div class="jumbotron text-center bg-white">
 
@@ -25,7 +24,7 @@
             <div class="container">
                 <h2>On the image is: "{{ label }}"</h2>
                 <div class="card" style="width: 18rem;">
-                    <img src="{% static imgage %}" class="card-img-top" alt="{{ label }}">
+                    <img src="public/{{ image }}" class="card-img-top" alt="{{ label }}">
                     <div class="card-body">
                         <h5 class="card-title">{{ label }}</h5>
                     </div>

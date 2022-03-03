@@ -1,5 +1,4 @@
 {% extends 'plain.html' %}
-{% load static %}
 {% block content %}
     <div class="container mt-4">
         <h2>History</h2>
@@ -12,10 +11,10 @@
                 {% for img in images %}
                     <div class="col-lg-3 col-md-6">
                         <div class="card">
-                            <img src="{% static img.path %}" class="card-img-top" alt="{{ label }}">
+                            <img src="public/{{ img.path }}" class="card-img-top" alt="{{ label }}">
                             <div class="card-body">
                                 <h5 class="card-title">{{ img.predicted_label }}</h5>
-                                <p class="card-text">ID: {{ img.id }}<br>path: {% static img.path %}</p>
+                                <p class="card-text">ID: {{ img.id }}<br>path: public/{{ img.path }}</p>
                             </div>
 
                         </div>
