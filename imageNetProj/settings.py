@@ -12,7 +12,7 @@ SECRET_KEY = 'q_6-wyh5m^%br*#(14bnm_43hi9&y^+j@#zikqa6(-$jyw*f+y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'ccn-image-classifier.herokuapp.com/']
 
 # Application definition
 
