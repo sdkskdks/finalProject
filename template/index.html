@@ -1,0 +1,41 @@
+{% extends 'plain.html' %}
+
+{% block content %}
+    <div class="jumbotron text-center bg-white">
+
+        <form method="post" enctype="multipart/form-data" action="classifyImg">
+
+            {% csrf_token %}
+            <div class="input-group">
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile04" name="imagePath">
+                    <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+                </div>
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="submit">Send</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    {% if image != "" %}
+        <div class="bg-light container-fluid h-100">
+            <br>
+            <br>
+            <div class="container">
+                <h2>On the image is: "{{ label }}"</h2>
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ image }}" class="card-img-top" alt="{{ label }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ label }}</h5>
+                    </div>
+                </div>
+
+            </div>
+            <br><br>
+        </div>
+
+    {% endif %}
+
+
+{% endblock %}
