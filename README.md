@@ -8,9 +8,11 @@ Installation
 
 pip install django
 
-npm install 
+pip install tensorflow
 
-pip install mysql
+pip install keras
+
+pip install Pillow
 
 ##
 Usage
@@ -31,7 +33,15 @@ import requests
 ##
 Example
 
+with model_graph.as_default():
+    session = tf.compat.v1.Session()
+    with session.as_default():
+        model = load_model('./models/MobileNetModelImagenet.h5')
 
+with open('./models/imagenet_classes.json', 'r') as f:
+    labelList = f.read()
+
+labelList = json.loads(labelList)
     
     
 DATABASES = {
