@@ -1,6 +1,6 @@
 ## Title
 
-Python final project
+Python final project (Image classification)
 
 
 ##
